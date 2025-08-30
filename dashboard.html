@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Dashboard - Sistema de Gestión</title>
+    <link rel="stylesheet" href="assets/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <!-- ===============================
+         SIDEBAR
+    ================================ -->
+      <aside class="sidebar" id="sidebar" aria-label="Barra lateral">
+        <!-- Top del sidebar: Logo + botón cerrar -->
+        <div class="sidebar-top">
+          <div class="brand">
+            <img
+              src="assets/img/Logo-UG-2016.png"
+              alt="Logo UG"
+              class="brand-logo"
+            />
+            <div class="brand-text">
+              <div class="brand-title">UG - Gestión</div>
+              <div class="brand-sub">Proyectos Curriculares</div>
+            </div>
+          </div>
+
+          <!-- Botón único: X cerrar / abrir sidebar -->
+          <button
+            class="btn-icon collapse-btn"
+            id="btnToggleSidebar"
+            aria-label="Cerrar barra lateral"
+            title="Cerrar menú"
+          >
+            <svg
+              class="icon icon-close"
+              viewBox="0 0 24 24"
+              width="18"
+              height="18"
+              aria-hidden="true"
+            >
+              <path
+                d="M6 6L18 18M6 18L18 6"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                fill="none"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="nav" aria-label="Dashboard Administrador">
+          <ul>
+            <li class="nav-item active">
+              <a href="#">
+                <span class="icon">
+                  <!-- 📊 Dashboard -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M3 13h8V3H3v10zm0 8h8v-6H3v6zM13 21h8V11h-8v10zM13 3v6h8V3h-8z"
+                    />
+                  </svg>
+                </span>
+                <span class="label">Tablero</span>
+              </a>
+            </li>
+           
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- 🛠 Roles -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 2a5 5 0 015 5c0 1.9-1.1 3.6-2.7 4.4.5.6.7 1.3.7 2.1 0 2.2-1.8 4-4 4s-4-1.8-4-4c0-.8.3-1.5.7-2.1C8.1 10.6 7 8.9 7 7a5 5 0 015-5zM4 20c0-2.7 5.3-4 8-4s8 1.3 8 4v2H4v-2z"
+                    />
+                  </svg>
+                </span>
+                <span class="label">Roles</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- 📁 Proyectos -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M10 4l2 2h8c1.1 0 2 .9 2 2v10c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2L2 6c0-1.1.9-2 2-2h6z"
+                    />
+                  </svg>
+                </span>
+                <span class="label">Proyectos</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- 📂 Archivos -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M4 4h16v16H4V4zm4 4v2h8V8H8zm0 4v2h5v-2H8z" />
+                  </svg>
+                </span>
+                <span class="label">Archivos</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- 🖼 Imagenes -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M21 19V5c0-1.1-.9-2-2-2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                    />
+                  </svg>
+                </span>
+                <span class="label">Imágenes</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- ⬇ Descargas -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M5 20h14v-2H5v2zm7-18l-5 5h3v4h4V7h3l-5-5z" />
+                  </svg>
+                </span>
+                <span class="label">Descargas</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- 🎫 Tickets -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M4 4h16v4h-2c-1.1 0-2 .9-2 2s.9 2 2 2h2v4h-2c-1.1 0-2 .9-2 2s.9 2 2 2h2v4H4v-4h2c1.1 0 2-.9 2-2s-.9-2-2-2H4v-4h2c1.1 0 2-.9 2-2s-.9-2-2-2H4V4z"
+                    />
+                  </svg>
+                </span>
+                <span class="label">Tickets</span>
+              </a>
+            </li>
+
+            <li class="nav-item">
+              <a href="#">
+                <span class="icon">
+                  <!-- 👤 Usuarios -->
+                  <svg viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"
+                    />
+                  </svg>
+                </span>
+                <span class="label">Usuarios</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <!-- Resizer handle -->
+        <div
+          class="resizer"
+          id="sidebarResizer"
+          aria-hidden="true"
+          title="Arrastra para cambiar ancho"
+        ></div>
+
+        <!-- Footer del sidebar -->
+        <div class="sidebar-footer">
+          <div class="small muted">Universidad de Guayaquil</div>
+          <div class="copyright">© <span id="year"></span></div>
+        </div>
+      </aside>
+
+      <!-- ===============================
+         OVERLAY PARA MÓVIL
+    ================================ -->
+      <div id="overlay"></div>
+
+      <!-- ===============================
+         MAIN AREA
+    ================================ -->
+      <div class="main-area">
+        <!-- NAVBAR / TOPBAR -->
+        <header class="topbar">
+          <div class="topbar-left">
+            <button
+              class="btn-icon"
+              id="btnToggleSidebarMobile"
+              aria-label="Abrir menú"
+            >
+              <svg viewBox="0 0 24 24" width="20" height="20">
+                <path
+                  d="M3 6h18M3 12h18M3 18h18"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </button>
+            <div class="top-search">
+              <input
+                type="search"
+                placeholder="Buscar..."
+                aria-label="Buscar"
+                id="searchInput"
+              />
+            </div>
+          </div>
+
+          <div class="topbar-right">
+            <div class="user" id="userMenuToggle">
+              <img
+                src="assets/img/masculino.png"
+                alt="Usuario"
+                class="avatar"
+              />
+              <div class="user-info">
+                <div class="user-name">Profesor/a</div>
+                <div class="user-role small muted">Ingeniería de Software</div>
+              </div>
+            </div>
+
+            <!-- Menú desplegable -->
+            <div class="user-menu" id="userMenu">
+              <ul>
+                <li><a href="#">Perfil</a></li>
+                <li><a href="#">Salir</a></li>
+                <li><a href="dashboard/dashboard_director.html">Director</a></li>
+                <li><a href="dashboard/dashboard _docente.html">Profesor</a></li>
+                <li><a href="dashboard/dashboard_estudiante.html">Estudiante</a></li>
+              </ul>
+            </div>
+          </div>
+        </header>
+
+        <!-- PAGE CONTENT -->
+        <main class="content">
+          <div class="page-header">
+            <h1>Tablero</h1>
+            <p class="muted">
+              Bienvenido al sistema de gestión — aquí tienes un resumen rápido.
+            </p>
+          </div>
+
+          <div class="grid">
+            <div class="card small">
+              <div class="card-icon download">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M5 20h14v-2H5v2zm7-18l-5 5h3v4h4V7h3l-5-5z" />
+                </svg>
+              </div>
+              <div class="card-title">Descargas</div>
+              <div class="card-value">345</div>
+            </div>
+
+            <div class="card small">
+              <div class="card-icon users">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"
+                  />
+                </svg>
+              </div>
+              <div class="card-title">Usuarios</div>
+              <div class="card-value">120</div>
+            </div>
+
+            <div class="card small">
+              <div class="card-icon teacher">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 12c2.2 0 4-1.8 4-4s-1.8-4-4-4-4 1.8-4 4 1.8 4 4 4zm0 2c-2.7 0-8 1.3-8 4v2h16v-2c0-2.7-5.3-4-8-4z"
+                  />
+                </svg>
+              </div>
+              <div class="card-title">Docentes</div>
+              <div class="card-value">35</div>
+            </div>
+
+            <div class="card small">
+              <div class="card-icon student">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"
+                  />
+                </svg>
+              </div>
+              <div class="card-title">Estudiantes</div>
+              <div class="card-value">420</div>
+            </div>
+
+            <div class="card small">
+              <div class="card-icon professor">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M12 12c2.7 0 5-2.3 5-5s-2.3-5-5-5-5 2.3-5 5 2.3 5 5 5zm0 2c-3.3 0-10 1.7-10 5v3h20v-3c0-3.3-6.7-5-10-5z"
+                  />
+                </svg>
+              </div>
+              <div class="card-title">Profesores</div>
+              <div class="card-value">40</div>
+            </div>
+
+            <div class="card small">
+              <div class="card-icon image">
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <path
+                    d="M21 19V5c0-1.1-.9-2-2-2H5C3.9 3 3 3.9 3 5v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"
+                  />
+                </svg>
+              </div>
+              <div class="card-title">Imágenes</div>
+              <div class="card-value">560</div>
+            </div>
+          </div>
+
+          <section class="panel">
+            <h2>Rendimiento mensual</h2>
+            <canvas id="dashboardChart" width="400" height="200"></canvas>
+          </section>
+        </main>
+       
+
+        <!-- FOOTER -->
+        <footer class="footer">
+          <div>Universidad de Guayaquil — Ingeniería de Software</div>
+          <div class="small muted">
+            Diseñado por tu equipo • <span id="yearFooter"></span>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <!-- JS principal -->
+    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/dashboard.js"></script>
+    <script src="assets/js/dashboard/dashboard.js"></script>
+  </body>
+</html>
