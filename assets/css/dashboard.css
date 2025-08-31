@@ -265,6 +265,243 @@ html,body{
   background-color: #b91c1c;
 }
 
+.nav-item {
+  position: relative;
+}
+
+.nav-item .badge {
+  position: absolute;
+  top: 4px;
+  right: 8px;
+  background: #ef4444; /* rojo bonito */
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(0,0,0,0.25);
+}
+
+/* Modal principal */
+.modal-dark {
+  background-color: #0f1724;       /* Fondo oscuro */
+  color: #fff;
+  min-height: 600px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  overflow: hidden;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Fondo visual con imagen */
+.modal-bg-image {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('../img/fondo_estudiantes.png') no-repeat center center;
+  background-size: cover;
+  opacity: 0.08;  /* más sutil */
+  z-index: 1;
+  filter: blur(2px); /* efecto suave */
+}
+
+/* Inputs y selects */
+.form-dark {
+  background-color: #1e293b;
+  color: #fff;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  padding: 0.5rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.form-dark:focus {
+  border-color: #3b57f9;
+  box-shadow: 0 0 0 3px rgba(59, 87, 249, 0.3);
+  outline: none;
+}
+
+/* Botones */
+.btn-accent {
+  background-color: #3b57f9;
+  color: #fff;
+  border-radius: 8px;
+  transition: background-color 0.3s, transform 0.1s;
+}
+
+.btn-accent:hover {
+  background-color: #2d44c3;
+  transform: scale(1.05);
+}
+
+.btn-accent:active {
+  transform: scale(0.98);
+}
+
+/* Nav tabs */
+.nav-dark .nav-link {
+  color: #cbd5e1;
+  border-radius: 8px 8px 0 0;
+  margin-right: 0.25rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-dark .nav-link.active {
+  background-color: #3b57f9;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Lista de grupos */
+#listaGrupos li {
+  background-color: #1e293b;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#listaGrupos li:hover {
+  background-color: #3b57f9;
+  color: #fff;
+}
+
+/* Cards de grupos dinámicos */
+#gruposContainer .card {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+  color: #fff;
+  padding: 0.75rem;
+}
+
+#gruposContainer .card h5 {
+  margin-bottom: 0.5rem;
+  color: #3b57f9;
+}
+
+#gruposContainer .card ul li {
+  padding: 0.25rem 0.5rem;
+  border-bottom: 1px solid #334155;
+}
+
+/* Tabla de estudiantes */
+.table-dark th, .table-dark td {
+  vertical-align: middle;
+}
+
+/* Scroll para tabla si es necesario */
+#estudiantesTable_wrapper {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Footer modal */
+.modal-footer {
+  background-color: #0f1724aa;
+  border-top: 1px solid #334155;
+}
+
+/* Pequeños detalles */
+.mb-3 label {
+  font-weight: 500;
+}
+
+
+.latest-activities {
+  background-color: #0f1724;
+  padding: 1rem;
+  border-radius: 12px;
+  color: #fff;
+}
+
+.latest-activities h2 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #3b57f9;
+}
+
+.activities-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.activity-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: #1e293b;
+  border-radius: 10px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.activity-info strong {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.activity-info p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #cbd5e1;
+}
+
+.activity-time span {
+  font-size: 0.8rem;
+  background: #3b57f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 500;
+  color: #fff;
+}
+
+/* Caja de filtros */
+.filters-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #f8f9fa;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  align-items: flex-end;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  min-width: 160px;
+}
+
+.filter-group label {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.activity-actions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background: #3b57f9;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.activity-actions button:hover {
+  background: #2d44c3;
+}
 /* =======================================
    OVERLAY MÓVIL
 ======================================= */
